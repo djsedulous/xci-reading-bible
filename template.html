@@ -1,0 +1,141 @@
+<html>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <style>
+        * {
+            font-family: "Georgia";
+        }
+
+        body {
+            width: 1100px;
+            margin: 8px auto;
+        }
+
+        .day-num {
+            position: absolute;
+            font-size: 9pt;
+            margin-left: 0px;
+            margin-top: -14px;
+            background: white;
+            padding: 4px 0px 2px;
+            border-radius: 50%;
+            height: 18px !important;
+            display: block;
+            width: 28px !important;
+        }
+
+        .logo {
+            position: relative;
+            margin-bottom: -60pt;
+            height: 60pt;
+        }
+
+        .logo img {
+            width: 220px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th {
+            background: #cccccc;
+            width: 25%;
+        }
+
+        table td, table th {
+            border: 1px solid black;
+            padding: 5pt;
+            vertical-align: top;
+            font-size: 18pt;
+        }
+
+        table th.empty, table td.empty {
+            border: none;
+            background: no-repeat;
+        }
+
+        tr.empty td {
+            height: 23pt;
+            border: none;
+        }
+
+        table tr:not(.empty) td {
+            padding-bottom: 28pt;
+        }
+
+        p {
+            margin: 0;
+            color: #000000;
+            font-size: 11pt;
+        }
+
+        h1 {
+            color: #000000;
+            font-size: 28pt;
+            text-align: center;
+            text-transform: uppercase;
+            padding-bottom: 6pt;
+            line-height: 1.15;
+            page-break-after: avoid;
+        }
+
+        @media print {
+            body {-webkit-print-color-adjust: exact;}
+        }
+    </style>
+    <link rel="icon" type="image/png" href="https://xci.com.ua/wp-content/uploads/2017/10/cropped-favicon-270x270.png"/>
+    <title>{TITLE}</title>
+</head>
+<body>
+<div class="logo"><img src="logo.jpg"></div>
+<h1>План чтения Библии</h1>
+<table>
+    <tr>
+        <th colspan="1" rowspan="1">
+            {DAY1_NAME}<br>{DAY1_DATE}
+        </th>
+        <th colspan="1" rowspan="1">
+            {DAY2_NAME}<br>{DAY2_DATE}
+        </th>
+        <th colspan="1" rowspan="1">
+            {DAY3_NAME}<br>{DAY3_DATE}
+        </th>
+        <th colspan="1" rowspan="1">
+            {DAY4_NAME}<br>{DAY4_DATE}
+        </th>
+    </tr>
+    <tr>
+        <td colspan="1" rowspan="1">{DAY1_CONTENT}</td>
+        <td colspan="1" rowspan="1">{DAY2_CONTENT}</td>
+        <td colspan="1" rowspan="1">{DAY3_CONTENT}</td>
+        <td colspan="1" rowspan="1">{DAY4_CONTENT}</td>
+    </tr>
+    <tr class="empty">
+        <td colspan="1" rowspan="1"></td>
+        <td colspan="1" rowspan="1"> </td>
+        <td colspan="1" rowspan="1"> </td>
+        <td colspan="1" rowspan="1"> </td>
+    </tr>
+    <tr>
+        <th colspan="1" rowspan="1">
+            {DAY5_NAME}<br>{DAY5_DATE}
+        </th>
+        <th colspan="1" rowspan="1">
+            {DAY6_NAME}<br>{DAY6_DATE}
+        </th>
+        <th colspan="1" rowspan="1">
+            {DAY7_NAME}<br>{DAY7_DATE}
+        </th>
+        <th colspan="1" rowspan="1" class="empty"></th>
+    </tr>
+    <tr>
+        <td colspan="1" rowspan="1">{DAY5_CONTENT}</td>
+        <td colspan="1" rowspan="1">{DAY6_CONTENT}</td>
+        <td colspan="1" rowspan="1">{DAY7_CONTENT}</td>
+        <td colspan="1" rowspan="1" class="empty"></td>
+    </tr>
+</table>
+</body>
+</html>
